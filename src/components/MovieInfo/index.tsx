@@ -24,6 +24,7 @@ const MovieInfo: React.FC<Props> = ({ movie }) => {
     const [user] = useContext(Context)
 
     const handleRating = async (value: number): Promise<void> => {
+        // eslint-disable-next-line @typescript-eslint/no-unused-vars
         const rate = await API.rateMovie(user.sessionId, movie.id, value)
     }
     return (
